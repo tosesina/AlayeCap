@@ -1,0 +1,13 @@
+Instructions:
+
+Create EC2 ssh key from aws console to enable remote access to the server
+
+Launch AWS Cloudformation API using AWS CLI from any system that has amazon command line configured as shown:
+	aws cloudformation create-stack --template-body file://<directory where the json template is stored>\webec.json --stack-name infinity-pro --parameters ParameterKey=KeyName,ParameterValue=<ec2-sshkey> ParameterKey=InstanceType,ParameterValue=t2.micro
+
+Login to the console and grab the public dns hostname
+
+Static url is as follows:
+		http://<public dns hostname>/web.html
+	
+	
